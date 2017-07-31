@@ -35,8 +35,7 @@ lazy val skuberSettings = Seq(
 
 lazy val examplesSettings = Seq(
   name := "skuber-examples",
-  libraryDependencies += akka,
-  bintrayReleaseOnPublish := false
+  libraryDependencies += akka
 )
 
 // by default run the guestbook example when executing a fat examples JAR
@@ -45,9 +44,6 @@ lazy val examplesAssemblySettings = Seq(
 )
 
 lazy val root = (project in file("."))
-  .settings(
-    bintrayReleaseOnPublish := false
-  )
   .aggregate(
     skuber,
     examples
