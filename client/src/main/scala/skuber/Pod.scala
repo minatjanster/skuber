@@ -28,6 +28,7 @@ object Pod {
   import DNSPolicy._
   case class Spec(
     containers: List[Container] = List(), // should have at least one member
+    initContainer: List[Container] = Nil,
     volumes: List[Volume] = Nil,
     restartPolicy: RestartPolicy.RestartPolicy = RestartPolicy.Always,
     terminationGracePeriodSeconds: Option[Int] = None,
